@@ -11,8 +11,8 @@ jobs:
     env:
       AWS_REGION: ${{ secrets.AWS_REGION }}
       sha_short: $(git rev-parse --short HEAD)
-      REGISTRIES: 289940214902
-      ECR_REGISTRY: 289940214902.dkr.ecr.us-east-1.amazonaws.com
+      REGISTRY: ${{ secrets.REGISTRY }}
+      ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
 
     permissions:
       id-token: write
